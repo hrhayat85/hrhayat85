@@ -483,5 +483,37 @@ Hello! I'm <b>Habibur Rohman Hayat,</b> an enthusiastic student and self-taught 
     });
 </script>
 
+<!-- Anti-Inspect Scripts -->
+<script>
+    // Right-Click Disable
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    // Keyboard Shortcuts Disable
+    document.onkeydown = function(e) {
+        // F12
+        if (e.keyCode == 123) {
+            return false;
+        }
+        // Ctrl+Shift+I (Inspect)
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        // Ctrl+Shift+C (Inspect Element)
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        // Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+        // Ctrl+U (View Source)
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+            return false;
+        }
+    }
+</script>
+
 </body>
 </html>
